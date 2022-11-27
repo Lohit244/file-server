@@ -56,7 +56,7 @@ export default function Home(props: { paths: string[] }) {
         </h1>
         <div className={`flex flex-col ${vis ? "" : "hidden"}`}>
           {structureddata[folder].map((f) => {
-            return <Card file={f} />;
+            return <Card file={f} key={f} />;
           })}
         </div>
       </>
@@ -67,7 +67,7 @@ export default function Home(props: { paths: string[] }) {
     <div className="flex flex-col m-4">
       <h1 className="text-4xl font-bold mb-4">Welcome to The File Server</h1>
       {marr.map((folder) => (
-        <Subfolder folder={folder} />
+        <Subfolder folder={folder} key={folder} />
       ))}
     </div>
   );
