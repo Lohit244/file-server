@@ -41,7 +41,7 @@ export default function Home(props: { paths: string[] }) {
 
   const Subfolder = (props: { folder: string }) => {
     const folder = props.folder;
-    const [vis, setVis] = useState(true);
+    const [vis, setVis] = useState(false);
     return (
       <>
         <h1
