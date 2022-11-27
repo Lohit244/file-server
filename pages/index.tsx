@@ -65,7 +65,9 @@ export default function Home(props: { paths: string[] }) {
 
   return (
     <div className="flex flex-col m-4">
-      <h1 className="text-4xl font-bold mb-16">Welcome to The File Server</h1>
+      <h1 className="text-4xl font-bold mt-4 mb-8">
+        Welcome to The File Server
+      </h1>
       {marr.map((folder) => (
         <Subfolder folder={folder} key={folder} />
       ))}
