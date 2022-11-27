@@ -47,7 +47,7 @@ export default function Home(props: { paths: string[] }) {
         <h1
           className={`text-2xl ${
             vis ? "font-bold" : "font-light"
-          } my-4 w-max cursor-pointer hover:tracking-wide transition-all`}
+          } my-4 max-w-[20ch] sm:max-w-[30ch] md:max-w-[80%] break-words w-max cursor-pointer hover:tracking-wide transition-all`}
           onClick={() => {
             setVis(!vis);
           }}
