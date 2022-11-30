@@ -95,7 +95,7 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       paths: files,
     },
-    revalidate: 20,
+    revalidate: 80,
     fallback: "blocking",
   };
 };
