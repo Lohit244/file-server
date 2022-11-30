@@ -1,4 +1,4 @@
-import { GetServerSideProps } from "next";
+import { GetStaticProps } from "next";
 import { useState } from "react";
 
 export default function Home(props: { paths: string[] }) {
@@ -75,7 +75,7 @@ export default function Home(props: { paths: string[] }) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const fs = require("fs");
   const files: string[] = [];
   const dfs = (folder: string) => {
@@ -95,5 +95,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
     props: {
       paths: files,
     },
+    revalidate: 20,
+    fallback: "blocking",
   };
 };
