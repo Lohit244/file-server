@@ -30,7 +30,7 @@ export default function Home(props: { paths: string[] }) {
     return (
       <>
         <a
-          href={props.file}
+          href={props.file.replaceAll("[", "%5B").replaceAll("]", "%5D")}
           className="border border-white px-4 py-2 my-1 break-words rounded-md lg:hover:border-2 transition-all"
         >
           {props.file}
